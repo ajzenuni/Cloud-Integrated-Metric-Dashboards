@@ -1,0 +1,15 @@
+k8s:
+    path: 'k8s/k8soverview.json'
+    name: 'K8s Overview'
+    id: ''
+    mark: ''
+cluster:
+    path: 'k8s/cluster.json'
+    name: 'Cluster MEM/CPU'
+    id: ''
+    mark: ''
+node:
+    path: 'k8s/node.json'
+    name: 'Node MEM/CPU'
+    id: ''
+    mark: ''

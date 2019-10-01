@@ -1,0 +1,6 @@
+k8s:
+    param: 'etc/dash_param_k8s.yaml'
+    menu: 'k8s/menu.json'
+aws:
+    param: 'etc/dash_param_aws.yaml'
+    menu: 'aws/menu.json'

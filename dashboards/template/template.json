@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      2
+    ],
+    "clusterVersion": "1.176.125.20190917-160030"
+  },
+  "dashboardMetadata": {
+    "name": "AWS Overview",
+    "shared": true,
+    "sharingDetails": {
+      "linkShared": true,
+      "published": true
+    },
+    "dashboardFilter": {
+      "timeframe": "l_6_HOURS",
+      "managementZone": null
+    }
+  },
+  "tiles": []
+}

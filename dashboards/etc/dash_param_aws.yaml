@@ -1,0 +1,40 @@
+aws:
+    path: 'aws/awsoverview.json'
+    name: 'AWS Overview'
+    id: ''
+    mark: ''
+alb:
+    path: 'aws/alb_granular.json'
+    name: 'ALB - Granular'
+    id: ''
+    mark: ''
+clb:
+    path: 'aws/clb_granular.json'
+    name: 'CLB - Granular'
+    id: ''
+    mark: ''
+ebs:
+    path: 'aws/ebs_granular.json'
+    name: 'EBS - Granular'
+    id: ''
+    mark: ''
+ec2:
+    path: 'aws/ec2_granular.json'
+    name: 'EC2 - Granular'
+    id: ''
+    mark: ''
+lambda:
+    path: 'aws/lambda_granular.json'
+    name: 'Lambda - Granular'
+    id: ''
+    mark: ''
+nlb:
+    path: 'aws/nlb_granular.json'
+    name: 'NLB - Granular'
+    id: ''
+    mark: ''
+rds:
+    path: 'aws/rds_granular.json'
+    name: 'RDS - Granular'
+    id: ''
+    mark: ''

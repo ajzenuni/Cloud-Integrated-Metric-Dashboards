@@ -1,0 +1,50 @@
+[
+	{
+	  "name": "Markdown",
+	  "tileType": "MARKDOWN",
+	  "configured": true,
+	  "bounds": {
+		"top": 76,
+		"left": 0,
+		"width": 228,
+		"height": 38
+	  },
+	  "tileFilter": {
+		"timeframe": null,
+		"managementZone": null
+	  },
+	  "markdown": "## 🛠 [Cluster MEM/CPU]({url}/#dashboard/dashboard;id={cluster};gtf=l_2_HOURS;gf=all)"
+	},
+	{
+	  "name": "Markdown",
+	  "tileType": "MARKDOWN",
+	  "configured": true,
+	  "bounds": {
+		"top": 114,
+		"left": 0,
+		"width": 228,
+		"height": 38
+	  },
+	  "tileFilter": {
+		"timeframe": null,
+		"managementZone": null
+	  },
+	  "markdown": "## 🖥 [Node MEM/CPU]({url}/#dashboard/dashboard;id={node};gf=all;gtf=l_2_HOURS)"
+	},
+	{
+	  "name": "Markdown",
+	  "tileType": "MARKDOWN",
+	  "configured": true,
+	  "bounds": {
+		"top": 38,
+		"left": 0,
+		"width": 228,
+		"height": 38
+	  },
+	  "tileFilter": {
+		"timeframe": null,
+		"managementZone": null
+	  },
+	  "markdown": "## 🏡 [K8s Overview]({url}/#dashboard/dashboard;id={k8s};gtf=l_2_HOURS)"
+	}
+]
