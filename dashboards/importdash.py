@@ -64,7 +64,7 @@ def main(idash):
         editmenu(getFileJSON(params[idash]['menu']))
         putdashboard()
     else:
-        print('fuck off')
+        print('Please provide the correct arguments, for help re-run with --help')
 
 if __name__ == "__main__":
     main()
