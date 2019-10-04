@@ -1,0 +1,50 @@
+[
+	{
+	  "name": "Markdown",
+	  "tileType": "MARKDOWN",
+	  "configured": true,
+	  "bounds": {
+		"top": 38,
+		"left": 0,
+		"width": 228,
+		"height": 38
+	  },
+	  "tileFilter": {
+		"timeframe": null,
+		"managementZone": null
+	  },
+	  "markdown": "## 🏡 [VMware Overview]({url}/#dashboard/dashboard;id={vmware};gf=all;gtf=l_2_HOURS)"
+	},
+	{
+	  "name": "Markdown",
+	  "tileType": "MARKDOWN",
+	  "configured": true,
+	  "bounds": {
+		"top": 76,
+		"left": 0,
+		"width": 228,
+		"height": 38
+	  },
+	  "tileFilter": {
+		"timeframe": null,
+		"managementZone": null
+	  },
+	  "markdown": "## 🖥 [Host Granular]({url}/#dashboard/dashboard;id={host};gtf=all;gtf=l_2_HOURS)"
+	},
+	{
+	  "name": "Markdown",
+	  "tileType": "MARKDOWN",
+	  "configured": true,
+	  "bounds": {
+		"top": 114,
+		"left": 0,
+		"width": 228,
+		"height": 38
+	  },
+	  "tileFilter": {
+		"timeframe": null,
+		"managementZone": null
+	  },
+	  "markdown": "## 💻 [VM Granular]({url}/#dashboard/dashboard;id={vm};gf=all;gtf=l_2_HOURS)"
+	}
+]

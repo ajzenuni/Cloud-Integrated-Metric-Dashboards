@@ -4,3 +4,6 @@ k8s:
 aws:
     param: 'etc/dash_param_aws.yaml'
     menu: 'aws/menu.json'
+vmware:
+    param: 'etc/dash_param_vmware.yaml'
+    menu: 'vmware/menu.json'

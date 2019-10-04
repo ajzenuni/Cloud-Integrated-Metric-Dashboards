@@ -1,0 +1,15 @@
+vmware:
+    path: 'vmware/vmwareoverview.json'
+    name: 'VMware Overview'
+    id: ''
+    mark: ''
+host:
+    path: 'vmware/hostgranular.json'
+    name: 'Host Granular'
+    id: ''
+    mark: ''
+vm:
+    path: 'vmware/vmgranular.json'
+    name: 'VM Granular'
+    id: ''
+    mark: ''

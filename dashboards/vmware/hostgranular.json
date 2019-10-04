@@ -1,0 +1,1897 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      2
+    ],
+    "clusterVersion": "1.180.0.20191004-124355"
+  },
+  "dashboardMetadata": {
+    "name": "Host Granular",
+    "shared": false,
+    "sharingDetails": {
+      "linkShared": true,
+      "published": false
+    },
+    "dashboardFilter": {
+      "timeframe": "",
+      "managementZone": null
+    }
+  },
+  "tiles": [
+    {
+      "name": "Menu",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "VMware Docs",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 190,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 0,
+        "width": 228,
+        "height": 76
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## 📝 [Host System Metrics](https://docs.vmware.com/en/vRealize-Operations-Manager/6.7/com.vmware.vcom.core.doc/GUID-C3CAAE15-2E83-431F-8F2D-C5297A3B6EA9.html)"
+    },
+    {
+      "name": "Dynatrace Help",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## 📝 [ESXi Host Metrics](https://www.dynatrace.com/support/help/shortlink/esxi-host)"
+    },
+    {
+      "name": "CPU",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1064,
+        "width": 760,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1064,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host CPU usage %",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.cpu.usage",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1520,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host CPU usage %",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.cpu.usage",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "# Active VMs",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 266,
+        "width": 760,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 266,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Number of VMs",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.vms.count",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 722,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Number of VMs",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.vms.count",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1862,
+        "width": 760,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk usage rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.disk.usage",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 2622,
+        "width": 418,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk usage rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.disk.usage",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 1862,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk commands aborted",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.commandsAborted",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 2318,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk commands aborted",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.commandsAborted",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 1862,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk read IOPS",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.rIops",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 1862,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk read IOPS",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.rIops",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 2242,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk write IOPS",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.wIops",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 2242,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk write IOPS",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.wIops",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Disk",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1862,
+        "width": 1520,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 2622,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk queue latency",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.queueLatency",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 3078,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk queue latency",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.queueLatency",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 2622,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk read rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.readRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 2622,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk read rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.readRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 988,
+        "left": 2242,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk write latency",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.writeLatency",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 1216,
+        "left": 2242,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk write latency",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.writeLatency",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 3002,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk write rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.writeRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 3002,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk write rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.writeRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 266,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host network data received rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.net.rx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Network",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 266,
+        "width": 760,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 722,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host network data received rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.net.rx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 266,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host network data transmitted rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.net.tx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 722,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host network data transmitted rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.net.tx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 988,
+        "left": 266,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Packets received dropped",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.nic.packetsRxDropped",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟NETWORK_INTERFACE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 988,
+        "left": 722,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Packets received dropped",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.nic.packetsRxDropped",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟NETWORK_INTERFACE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 988,
+        "left": 1862,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk read latency",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.readLatency",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 1216,
+        "left": 1862,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host disk read latency",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.hostdisk.readLatency",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "ESXi host disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1064,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host memory consumed",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.consumed",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 1216,
+        "left": 266,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Packets transmitted dropped",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.nic.packetsTxDropped",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟NETWORK_INTERFACE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 1216,
+        "left": 722,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Packets transmitted dropped",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.nic.packetsTxDropped",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "MONITORED_ENTITY˟NETWORK_INTERFACE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Disk Read/Write",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 1862,
+        "width": 1520,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Memory",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 1064,
+        "width": 760,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1520,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host memory consumed",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.consumed",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 1064,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host swap in rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.swapIn",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 1064,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host swap in rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.swapIn",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 1444,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host swap out rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.swapOut",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 760,
+        "left": 1444,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host swap out rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.swapOut",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 988,
+        "left": 1064,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host compression rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.compressionRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 1216,
+        "left": 1064,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host compression rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.compressionRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 988,
+        "left": 1444,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host decompression rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.decompressionRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 1216,
+        "left": 1444,
+        "width": 380,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Host decompression rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.mem.decompressionRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 266,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Number of VMs powered-off",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.vms.powerOff",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 722,
+        "width": 304,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Number of VMs powered-off",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.hypervisor.vms.powerOff",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "ESXI",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    }
+  ]
+}

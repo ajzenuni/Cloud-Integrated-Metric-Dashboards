@@ -1,0 +1,995 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      2
+    ],
+    "clusterVersion": "1.180.0.20191004-124355"
+  },
+  "dashboardMetadata": {
+    "name": "VM Granular",
+    "shared": false,
+    "sharingDetails": {
+      "linkShared": true,
+      "published": false
+    },
+    "dashboardFilter": {
+      "timeframe": "",
+      "managementZone": null
+    }
+  },
+  "tiles": [
+    {
+      "name": "Menu",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "VMware Docs",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 190,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## 📝 [VM Metrics](https://docs.vmware.com/en/vRealize-Operations-Manager/6.7/com.vmware.vcom.core.doc/GUID-1322F5A4-DA1D-481F-BBEA-99B228E96AF2.html)"
+    },
+    {
+      "name": "Dynatrace Help",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## 📝 [VMware Migration](https://www.dynatrace.com/support/help/shortlink/vm-migration)"
+    },
+    {
+      "name": "CPU",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 266,
+        "width": 760,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 266,
+        "width": 456,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM CPU usage %",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.cpu.usagePerc",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 722,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM CPU usage %",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.cpu.usagePerc",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 266,
+        "width": 456,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM CPU ready %",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.cpu.readyPerc",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 722,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM CPU ready %",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.cpu.readyPerc",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 266,
+        "width": 456,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM swap wait",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.cpu.swapWait",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 722,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM swap wait",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.cpu.swapWait",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Memory",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1064,
+        "width": 1710,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1064,
+        "width": 912,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM memory consumed",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.consumed",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1976,
+        "width": 456,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM memory consumed",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.consumed",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1064,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM swap in rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.swapIn",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 1064,
+        "width": 418,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM swap in rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.swapIn",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1482,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM swap out rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.swapOut",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 1482,
+        "width": 418,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM swap out rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.swapOut",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Disk",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 836,
+        "left": 266,
+        "width": 760,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 874,
+        "left": 266,
+        "width": 456,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM disk usage rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.disk.usage",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 874,
+        "left": 722,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM disk usage rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.disk.usage",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1900,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM compression rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.compressionRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 1900,
+        "width": 418,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM compression rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.compressionRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 2318,
+        "width": 418,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM decompression rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.decompressionRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 2318,
+        "width": 418,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM decompression rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.mem.decompressionRate",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Network",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 836,
+        "left": 1064,
+        "width": 1672,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 874,
+        "left": 1064,
+        "width": 494,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM network data received rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.net.rx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 874,
+        "left": 1558,
+        "width": 342,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM network data received rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.net.rx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 874,
+        "left": 1900,
+        "width": 494,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM network data transmitted rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.net.tx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 874,
+        "left": 2394,
+        "width": 342,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "VM network data transmitted rate",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.vmware.vm.net.tx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "VIRTUAL_MACHINE",
+              "dimensions": [],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    }
+  ]
+}

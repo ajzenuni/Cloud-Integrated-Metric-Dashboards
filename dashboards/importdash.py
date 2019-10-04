@@ -50,7 +50,8 @@ def getFileJSON(fileName):
 @click.option('--idash', '-d', 
 help='''-----------Available Scripts-----------\n
     -n AWS : AWS Dashboards\n
-    -n K8s : K8s Dashboards\n 
+    -n K8s : K8s Dashboards\n
+    -n VMware : VMware Dashboards\n 
     --------------------------------------\n''')
 
 def main(idash):
