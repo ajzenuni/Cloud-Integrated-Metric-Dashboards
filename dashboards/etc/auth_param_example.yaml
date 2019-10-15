@@ -1,0 +1,10 @@
+auth:
+  - url: {url}
+    api: {api-token}
+dashboard_config:
+    owner: {username}
+    shared: 
+          val: true
+          linkShared: true
+          published: true
+    
