@@ -3,7 +3,6 @@ import requests, json, io, click, yaml
 from dash import Dash
 from params import Params
 
-
 def createdashboard():
     global dash, config
     for service, sdict in dash.getdashobj().items():
@@ -24,7 +23,7 @@ def putdashboard():
         dashobj['id'] = dash.getid(service)
         dashobj['tiles'].extend(final_menu)
         dashobj = config.setparams(dashobj)
-
+        
         requests.put(config.geturl() + '/api/config/v1/dashboards/'+dash.getid(service),headers={'Content-Type': 'application/json'},data=json.dumps(dashobj), params=config.getapi())
 
 def editmenu(menu):
@@ -51,7 +50,8 @@ def getFileJSON(fileName):
 help='''-----------Available Scripts-----------\n
     -n AWS : AWS Dashboards\n
     -n K8s : K8s Dashboards\n
-    -n VMware : VMware Dashboards\n 
+    -n VMware : VMware Dashboards\n
+    -n Azure : Azure Dashboards\n 
     --------------------------------------\n''')
 
 def main(idash):

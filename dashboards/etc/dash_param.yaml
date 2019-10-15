@@ -7,3 +7,6 @@ aws:
 vmware:
     param: 'etc/dash_param_vmware.yaml'
     menu: 'vmware/menu.json'
+azure:
+    param: 'etc/dash_param_azure.yaml'
+    menu: 'azure/menu.json'

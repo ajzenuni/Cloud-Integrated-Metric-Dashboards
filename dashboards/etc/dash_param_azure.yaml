@@ -1,0 +1,90 @@
+azureoverview:
+    path: 'azure/azureoverview.json'
+    name: 'Azure Overview'
+    id: ''
+    mark: ''
+vm:
+    path: 'azure/vm.json'
+    name: 'VM'
+    id: ''
+    mark: ''
+storageb:
+    path: 'azure/storageb.json'
+    name: 'Storage - Blob'
+    id: ''
+    mark: ''
+storageq:
+    path: 'azure/storageq.json'
+    name: 'Storage - Queue'
+    id: ''
+    mark: ''
+storagef:
+    path: 'azure/storagef.json'
+    name: 'Storage - File'
+    id: ''
+    mark: ''
+storaget:
+    path: 'azure/storaget.json'
+    name: 'Storage - Table'
+    id: ''
+    mark: ''
+servicebus:
+    path: 'azure/servicebus.json'
+    name: 'Service Bus'
+    id: ''
+    mark: ''
+sqldb:
+    path: 'azure/sqldb.json'
+    name: 'SQL DB'
+    id: ''
+    mark: ''
+redis:
+    path: 'azure/redis.json'
+    name: 'Redis Cache'
+    id: ''
+    mark: ''
+loadbalancer:
+    path: 'azure/loadbalancer.json'
+    name: 'Load Balancer'
+    id: ''
+    mark: ''
+iothub:
+    path: 'azure/iothub.json'
+    name: 'IoT Hub'
+    id: ''
+    mark: ''
+eventhub:
+    path: 'azure/eventhub.json'
+    name: 'Event Hub'
+    id: ''
+    mark: ''
+cosmosdb:
+    path: 'azure/cosmosdb.json'
+    name: 'Cosmos Database'
+    id: ''
+    mark: ''
+appg:
+    path: 'azure/appg.json'
+    name: 'App Gateway'
+    id: ''
+    mark: ''
+appef:
+    path: 'azure/appef.json'
+    name: 'App Service (Excluding Functions)'
+    id: ''
+    mark: ''
+appf:
+    path: 'azure/appf.json'
+    name: 'App Service (Functions)'
+    id: ''
+    mark: ''
+api:
+    path: 'azure/api.json'
+    name: 'API Management'
+    id: ''
+    mark: ''
+elastic:
+    path: 'azure/elastic.json'
+    name: 'SQL Elastic Pool'
+    id: ''
+    mark: ''
