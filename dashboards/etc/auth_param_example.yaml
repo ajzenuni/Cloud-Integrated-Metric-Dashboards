@@ -1,5 +1,5 @@
 auth:
-  - url: {url}
+  - url: https://<tenant_UUID>.com
     api: {api-token}
 dashboard_config:
     owner: {username}
