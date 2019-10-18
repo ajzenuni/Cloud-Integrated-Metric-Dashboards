@@ -6,7 +6,7 @@
     "clusterVersion": "1.176.125.20190917-160030"
   },
   "dashboardMetadata": {
-    "name": "AWS - ALB - Granular",
+    "name": "AWS:  ALB - Granular",
     "shared": false,
     "sharingDetails": {
       "linkShared": false,

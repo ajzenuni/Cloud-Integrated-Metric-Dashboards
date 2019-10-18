@@ -6,7 +6,7 @@
     "clusterVersion": "1.176.125.20190917-160030"
   },
   "dashboardMetadata": {
-    "name": "AWS - Lambda - Granular",
+    "name": "AWS:  Lambda - Granular",
     "shared": false,
     "sharingDetails": {
       "linkShared": false,

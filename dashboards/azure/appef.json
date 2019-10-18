@@ -6,7 +6,7 @@
     "clusterVersion": "1.181.0.20191015-111512"
   },
   "dashboardMetadata": {
-    "name": "Azure - App Service (Excluding Functions)",
+    "name": "Azure: App Service (Excluding Functions)",
     "shared": true,
     "sharingDetails": {
       "linkShared": true,
