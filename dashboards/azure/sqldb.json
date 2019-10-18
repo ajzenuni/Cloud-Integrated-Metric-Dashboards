@@ -6,7 +6,7 @@
     "clusterVersion": "1.181.0.20191015-111512"
   },
   "dashboardMetadata": {
-    "name": "SQL DB",
+    "name": "Azure - SQL DB",
     "shared": true,
     "sharingDetails": {
       "linkShared": true,

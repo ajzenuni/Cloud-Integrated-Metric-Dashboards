@@ -6,7 +6,7 @@
     "clusterVersion": "1.181.0.20191015-111512"
   },
   "dashboardMetadata": {
-    "name": "Event Hub",
+    "name": "Azure - Event Hub",
     "shared": true,
     "sharingDetails": {
       "linkShared": true,

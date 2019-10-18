@@ -6,7 +6,7 @@
     "clusterVersion": "1.180.0.20191004-124355"
   },
   "dashboardMetadata": {
-    "name": "Host Granular",
+    "name": "VMware - Host Granular",
     "shared": false,
     "sharingDetails": {
       "linkShared": true,

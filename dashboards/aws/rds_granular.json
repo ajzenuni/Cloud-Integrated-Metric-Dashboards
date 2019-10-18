@@ -6,7 +6,7 @@
     "clusterVersion": "1.176.125.20190917-160030"
   },
   "dashboardMetadata": {
-    "name": "RDS - Granular",
+    "name": "AWS - RDS - Granular",
     "shared": false,
     "sharingDetails": {
       "linkShared": false,
