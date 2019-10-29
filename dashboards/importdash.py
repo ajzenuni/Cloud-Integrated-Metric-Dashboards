@@ -48,7 +48,7 @@ def getFileJSON(fileName):
 @click.command()
 @click.option('--idash', '-d', 
 help='''-----------Available Dashbaords-----------\n
-    awS : aws Dashboards\n
+    aws : aws Dashboards\n
     k8s : k8s Dashboards\n
     vmware : vmware Dashboards\n
     azure : azure Dashboards\n 
