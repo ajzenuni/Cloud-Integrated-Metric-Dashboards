@@ -349,7 +349,7 @@
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
-        "top": 342,
+        "top": 380,
         "left": 0,
         "width": 228,
         "height": 38
@@ -364,7 +364,7 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 380,
+        "top": 418,
         "left": 0,
         "width": 228,
         "height": 114
@@ -380,7 +380,7 @@
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
-        "top": 494,
+        "top": 532,
         "left": 0,
         "width": 228,
         "height": 38
@@ -395,7 +395,7 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 532,
+        "top": 570,
         "left": 0,
         "width": 228,
         "height": 152

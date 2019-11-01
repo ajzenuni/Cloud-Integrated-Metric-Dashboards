@@ -126,5 +126,21 @@
         "managementZone": null
       },
       "markdown": "## ▶ [Lambda - Granular]({url}/#dashboard/dashboard;id={lambda})"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 0,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## ⚡ [DynaDB - Granular]({url}/#dashboard/dashboard;id={dynamodb})"
     }
 ]

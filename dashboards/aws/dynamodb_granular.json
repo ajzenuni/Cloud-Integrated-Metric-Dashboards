@@ -3,17 +3,17 @@
     "configurationVersions": [
       2
     ],
-    "clusterVersion": "1.176.125.20190917-160030"
+    "clusterVersion": "1.179.134.20191023-154235"
   },
   "dashboardMetadata": {
-    "name": "AWS:  EBS - Granular",
+    "name": "AWS: DynamoDB - Granular",
     "shared": false,
     "sharingDetails": {
-      "linkShared": false,
+      "linkShared": true,
       "published": false
     },
     "dashboardFilter": {
-      "timeframe": "l_2_HOURS",
+      "timeframe": "",
       "managementZone": null
     }
   },
@@ -56,111 +56,22 @@
         "top": 418,
         "left": 0,
         "width": 228,
-        "height": 114
+        "height": 76
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [EBS - Cloud Watch](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using_cloudwatch_ebs.html)"
+      "markdown": "## [DynamoDB - Cloud Watch](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/metrics-dimensions.html)"
     },
     {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 266,
-        "width": 646,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume idle time %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.idleTime",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": true,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 912,
-        "width": 456,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume idle time %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "PIE",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.idleTime",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": true,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "EBS Usage",
+      "name": "# Tables by AvailabilityZone",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
         "top": 0,
         "left": 266,
-        "width": 1102,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
-    {
-      "name": "EBS # of Read/Write OPS requests waiting",
-      "tileType": "HEADER",
-      "configured": true,
-      "bounds": {
-        "top": 342,
-        "left": 266,
-        "width": 1102,
+        "width": 722,
         "height": 38
       },
       "tileFilter": {
@@ -173,10 +84,10 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 380,
+        "top": 38,
         "left": 266,
-        "width": 646,
-        "height": 304
+        "width": 456,
+        "height": 228
       },
       "tileFilter": {
         "timeframe": null,
@@ -184,19 +95,27 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume queue length",
+        "customName": "Number of tables for AvailabilityZone",
         "defaultName": "Custom chart",
         "chartConfig": {
           "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.queue",
+              "metric": "builtin:cloud.aws.dynamo.tables",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
+              "entityType": "AWS_CREDENTIALS",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "AWS Availability Zone",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -210,10 +129,10 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 380,
-        "left": 912,
-        "width": 456,
-        "height": 304
+        "top": 38,
+        "left": 722,
+        "width": 266,
+        "height": 228
       },
       "tileFilter": {
         "timeframe": null,
@@ -221,108 +140,80 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume queue length",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "PIE",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.queue",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 760,
-        "left": 266,
-        "width": 646,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume throughput %",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.throughput.percent",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "(IOPS SSD Volumes) - % of IOPS delivered of the total IOPS",
-      "tileType": "HEADER",
-      "configured": true,
-      "bounds": {
-        "top": 722,
-        "left": 266,
-        "width": 1102,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 760,
-        "left": 912,
-        "width": 456,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume throughput %",
+        "customName": "Number of tables for AvailabilityZone",
         "defaultName": "Custom chart",
         "chartConfig": {
           "type": "TOP_LIST",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.throughput.percent",
+              "metric": "builtin:cloud.aws.dynamo.tables",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "AWS_CREDENTIALS",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "AWS Availability Zone",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "AVG % of provisioned read/write capacity units utilized",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1786,
+        "width": 722,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1786,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB read capacity units %",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.capacityUnits.read",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -337,8 +228,8 @@
       "configured": true,
       "bounds": {
         "top": 38,
-        "left": 1406,
-        "width": 646,
+        "left": 2242,
+        "width": 266,
         "height": 228
       },
       "tileFilter": {
@@ -347,130 +238,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume read latency",
+        "customName": "DynamoDB read capacity units %",
         "defaultName": "Custom chart",
         "chartConfig": {
-          "type": "TIMESERIES",
+          "type": "TOP_LIST",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.latency.read",
+              "metric": "builtin:cloud.aws.dynamo.capacityUnits.read",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 2052,
-        "width": 456,
-        "height": 228
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume read latency",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "PIE",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.latency.read",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 760,
-        "left": 1406,
-        "width": 646,
-        "height": 228
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume write latency",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.latency.write",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 760,
-        "left": 2052,
-        "width": 456,
-        "height": 228
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume write latency",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "PIE",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.latency.write",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -485,8 +266,8 @@
       "configured": true,
       "bounds": {
         "top": 266,
-        "left": 1406,
-        "width": 646,
+        "left": 1786,
+        "width": 456,
         "height": 228
       },
       "tileFilter": {
@@ -495,19 +276,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume read OPS",
+        "customName": "DynamoDB write capacity units %",
         "defaultName": "Custom chart",
         "chartConfig": {
           "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.ops.read",
+              "metric": "builtin:cloud.aws.dynamo.capacityUnits.write",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -522,8 +304,8 @@
       "configured": true,
       "bounds": {
         "top": 266,
-        "left": 2052,
-        "width": 456,
+        "left": 2242,
+        "width": 266,
         "height": 228
       },
       "tileFilter": {
@@ -532,19 +314,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume read OPS",
+        "customName": "DynamoDB write capacity units %",
         "defaultName": "Custom chart",
         "chartConfig": {
           "type": "TOP_LIST",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.ops.read",
+              "metric": "builtin:cloud.aws.dynamo.capacityUnits.write",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -554,13 +337,28 @@
       }
     },
     {
+      "name": "Errors",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 266,
+        "left": 266,
+        "width": 722,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
       "name": "Custom chart",
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 988,
-        "left": 1406,
-        "width": 646,
+        "top": 304,
+        "left": 266,
+        "width": 456,
         "height": 228
       },
       "tileFilter": {
@@ -569,19 +367,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume write OPS",
+        "customName": "DynamoDB number of requests with HTTP 400 status code",
         "defaultName": "Custom chart",
         "chartConfig": {
           "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.ops.write",
-              "aggregation": "AVG",
+              "metric": "builtin:cloud.aws.dynamo.errors.user",
+              "aggregation": "NONE",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -595,9 +394,9 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 988,
-        "left": 2052,
-        "width": 456,
+        "top": 304,
+        "left": 722,
+        "width": 266,
         "height": 228
       },
       "tileFilter": {
@@ -606,19 +405,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume write OPS",
+        "customName": "DynamoDB number of requests with HTTP 400 status code",
         "defaultName": "Custom chart",
         "chartConfig": {
           "type": "TOP_LIST",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.ops.write",
-              "aggregation": "AVG",
+              "metric": "builtin:cloud.aws.dynamo.errors.user",
+              "aggregation": "NONE",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -628,13 +428,89 @@
       }
     },
     {
-      "name": "EBS - Read Disk I/O",
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 266,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB number of requests with HTTP 500 status code",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.errors.system",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
+              "dimensions": [],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 722,
+        "width": 266,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB number of requests with HTTP 500 status code",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.errors.system",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
+              "dimensions": [],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Requests - # Items returned by operation",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 1406,
-        "width": 1102,
+        "left": 1026,
+        "width": 722,
         "height": 38
       },
       "tileFilter": {
@@ -643,13 +519,283 @@
       }
     },
     {
-      "name": "EBS - Write Disk I/O",
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1026,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB number of items returned by operation",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.requests.returnedItems",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "Operation",
+                  "values": [],
+                  "entityDimension": false
+                }
+              ],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1482,
+        "width": 266,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB number of items returned by operation",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.requests.returnedItems",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "Operation",
+                  "values": [],
+                  "entityDimension": false
+                }
+              ],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1026,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB number of successful request latency for operation",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.requests.latency",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "Operation",
+                  "values": [],
+                  "entityDimension": false
+                }
+              ],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1482,
+        "width": 266,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB number of successful request latency for operation",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.requests.latency",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "Operation",
+                  "values": [],
+                  "entityDimension": false
+                }
+              ],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 1026,
+        "width": 456,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB number of throttled requests for operation",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.requests.throttled",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "Operation",
+                  "values": [],
+                  "entityDimension": false
+                }
+              ],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 1482,
+        "width": 266,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "DynamoDB number of throttled requests for operation",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "type": "TOP_LIST",
+          "series": [
+            {
+              "metric": "builtin:cloud.aws.dynamo.requests.throttled",
+              "aggregation": "NONE",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "DYNAMO_DB",
+              "dimensions": [
+                {
+                  "id": "1",
+                  "name": "Operation",
+                  "values": [],
+                  "entityDimension": false
+                }
+              ],
+              "sortAscending": false,
+              "aggregationRate": "TOTAL",
+              "sortColumn": true
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Throttled Events",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
-        "top": 722,
-        "left": 1406,
-        "width": 1102,
+        "top": 494,
+        "left": 1786,
+        "width": 722,
         "height": 38
       },
       "tileFilter": {
@@ -662,45 +808,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 494,
-        "left": 1406,
-        "width": 646,
-        "height": 228
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume read throughput",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.throughput.read",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 494,
-        "left": 2052,
+        "top": 532,
+        "left": 1786,
         "width": 456,
         "height": 228
       },
@@ -710,19 +819,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume read throughput",
+        "customName": "DynamoDB number of read throttled events",
         "defaultName": "Custom chart",
         "chartConfig": {
-          "type": "TOP_LIST",
+          "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.throughput.read",
-              "aggregation": "AVG",
+              "metric": "builtin:cloud.aws.dynamo.throttledEvents.read",
+              "aggregation": "NONE",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -736,9 +846,9 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 1216,
-        "left": 1406,
-        "width": 646,
+        "top": 532,
+        "left": 2242,
+        "width": 266,
         "height": 228
       },
       "tileFilter": {
@@ -747,19 +857,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume write throughput",
+        "customName": "DynamoDB number of read throttled events",
         "defaultName": "Custom chart",
         "chartConfig": {
-          "type": "TIMESERIES",
+          "type": "TOP_LIST",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.throughput.write",
-              "aggregation": "AVG",
+              "metric": "builtin:cloud.aws.dynamo.throttledEvents.read",
+              "aggregation": "NONE",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -773,8 +884,8 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 1216,
-        "left": 2052,
+        "top": 760,
+        "left": 1786,
         "width": 456,
         "height": 228
       },
@@ -784,19 +895,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume write throughput",
+        "customName": "DynamoDB number of write throttled events",
         "defaultName": "Custom chart",
         "chartConfig": {
-          "type": "TOP_LIST",
+          "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.throughput.write",
-              "aggregation": "AVG",
+              "metric": "builtin:cloud.aws.dynamo.throttledEvents.write",
+              "aggregation": "NONE",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -806,14 +918,14 @@
       }
     },
     {
-      "name": "",
+      "name": "Custom chart",
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 1102,
-        "left": 266,
-        "width": 646,
-        "height": 342
+        "top": 760,
+        "left": 2242,
+        "width": 266,
+        "height": 228
       },
       "tileFilter": {
         "timeframe": null,
@@ -821,19 +933,20 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "EBS volume consumed OPS",
+        "customName": "DynamoDB number of write throttled events",
         "defaultName": "Custom chart",
         "chartConfig": {
-          "type": "TIMESERIES",
+          "type": "TOP_LIST",
           "series": [
             {
-              "metric": "builtin:cloud.aws.ebs.ops.consumed",
-              "aggregation": "AVG",
+              "metric": "builtin:cloud.aws.dynamo.throttledEvents.write",
+              "aggregation": "NONE",
               "percentile": null,
               "type": "LINE",
-              "entityType": "EBS",
+              "entityType": "DYNAMO_DB",
               "dimensions": [],
               "sortAscending": false,
+              "aggregationRate": "TOTAL",
               "sortColumn": true
             }
           ],
@@ -843,13 +956,13 @@
       }
     },
     {
-      "name": "(IOPS SSD Volumes) - Total Number of Read/Write Operations Consumed",
+      "name": "Requests - Latency of succesful requests by operation",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
-        "top": 1064,
-        "left": 266,
-        "width": 1102,
+        "top": 266,
+        "left": 1026,
+        "width": 722,
         "height": 38
       },
       "tileFilter": {
@@ -858,40 +971,18 @@
       }
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
+      "name": "Requests - Throttled requests by operation",
+      "tileType": "HEADER",
       "configured": true,
       "bounds": {
-        "top": 1102,
-        "left": 912,
-        "width": 456,
-        "height": 342
+        "top": 532,
+        "left": 1026,
+        "width": 722,
+        "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "EBS volume consumed OPS",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:cloud.aws.ebs.ops.consumed",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "EBS",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
       }
     }
   ]

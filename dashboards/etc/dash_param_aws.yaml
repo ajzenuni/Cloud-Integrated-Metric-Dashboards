@@ -38,3 +38,8 @@ rds:
     name: 'AWS: RDS - Granular'
     id: ''
     mark: ''
+dynamodb:
+    path: 'aws/dynamodb_granular.json'
+    name: 'AWS: DynamoDB - Granular'
+    id: ''
+    mark: ''
