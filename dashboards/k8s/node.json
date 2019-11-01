@@ -6,7 +6,7 @@
     "clusterVersion": "1.180.0.20191001-105643"
   },
   "dashboardMetadata": {
-    "name": "K8S: Node MEM/CPU",
+    "name": "K8s: Node MEM/CPU",
     "shared": false,
     "sharingDetails": {
       "linkShared": true,

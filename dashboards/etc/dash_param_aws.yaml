@@ -5,36 +5,36 @@ aws:
     mark: ''
 alb:
     path: 'aws/alb_granular.json'
-    name: 'ALB - Granular'
+    name: 'AWS: ALB - Granular'
     id: ''
     mark: ''
 clb:
     path: 'aws/clb_granular.json'
-    name: 'CLB - Granular'
+    name: 'AWS: CLB - Granular'
     id: ''
     mark: ''
 ebs:
     path: 'aws/ebs_granular.json'
-    name: 'EBS - Granular'
+    name: 'AWS: EBS - Granular'
     id: ''
     mark: ''
 ec2:
     path: 'aws/ec2_granular.json'
-    name: 'EC2 - Granular'
+    name: 'AWS: EC2 - Granular'
     id: ''
     mark: ''
 lambda:
     path: 'aws/lambda_granular.json'
-    name: 'Lambda - Granular'
+    name: 'AWS: Lambda - Granular'
     id: ''
     mark: ''
 nlb:
     path: 'aws/nlb_granular.json'
-    name: 'NLB - Granular'
+    name: 'AWS: NLB - Granular'
     id: ''
     mark: ''
 rds:
     path: 'aws/rds_granular.json'
-    name: 'RDS - Granular'
+    name: 'AWS: RDS - Granular'
     id: ''
     mark: ''

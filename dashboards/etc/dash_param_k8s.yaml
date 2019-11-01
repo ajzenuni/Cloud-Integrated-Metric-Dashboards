@@ -5,11 +5,11 @@ k8s:
     mark: ''
 cluster:
     path: 'k8s/cluster.json'
-    name: 'Cluster MEM/CPU'
+    name: 'K8s: Cluster MEM/CPU'
     id: ''
     mark: ''
 node:
     path: 'k8s/node.json'
-    name: 'Node MEM/CPU'
+    name: 'K8s: Node MEM/CPU'
     id: ''
     mark: ''

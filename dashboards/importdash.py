@@ -1,4 +1,4 @@
-import requests, json, io, click, yaml
+import requests, json, io, click, yaml, sys
 
 from dash import Dash
 from params import Params
@@ -10,7 +10,12 @@ def createdashboard():
         dashobj['dashboardMetadata']['name'] = sdict['name']
         post = requests.post(config.geturl() + '/api/config/v1/dashboards',headers={'Content-Type': 'application/json'},data=json.dumps(dashobj), params=config.getapi())
         id_content = post.json()
-        dash.setid(id_content['id'], service)
+        if(post.status_code >= 400):
+            print("The API Token in the auth_params.yaml file is incorrect or improper permissions. Please ensure the correct token is supplied or it has the 'Read configuration' and 'Write configuration' permissions.")
+            sys.exit()
+        else:
+            id_content = post.json()
+            dash.setid(id_content['id'], service)
 
 def putdashboard():
     global dash, config

@@ -1,4 +1,4 @@
-import yaml
+import yaml, sys
 
 class Params:
     def __init__(self):
@@ -6,7 +6,11 @@ class Params:
             self.param_obj = yaml.load(param_file, Loader=yaml.FullLoader)
     
     def geturl(self):
-        return self.param_obj['auth'][0]['url']
+        if(self.param_obj['auth'][0]['url'].endswith("/")):
+            print('Incorrect Inputs: The tenant URL in the auth_params.yaml file. Remove this and try again')
+            sys.exit()
+        else:
+            return self.param_obj['auth'][0]['url']
 
     def getapi(self):
         self.param = {'Api-Token': self.param_obj['auth'][0]['api']}
