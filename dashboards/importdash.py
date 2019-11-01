@@ -11,7 +11,7 @@ def createdashboard():
         post = requests.post(config.geturl() + '/api/config/v1/dashboards',headers={'Content-Type': 'application/json'},data=json.dumps(dashobj), params=config.getapi())
         id_content = post.json()
         if(post.status_code >= 400):
-            print("The API Token in the auth_params.yaml file is incorrect or improper permissions. Please ensure the correct token is supplied or it has the 'Read configuration' and 'Write configuration' permissions.")
+            print("The API Token in the auth_params.yaml file is incorrect or has improper permissions. Please ensure the correct token is supplied or it has the 'Read configuration' and 'Write configuration' permissions.")
             sys.exit()
         else:
             id_content = post.json()
