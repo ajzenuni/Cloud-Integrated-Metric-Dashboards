@@ -7,7 +7,7 @@ Install the required modules running 'pip install -r stable-req.text'
 # Get Started
 Provide the tenant/environment url, api-token and username params in the auth_param_example.yaml file found in etc/. Rename the file to auth_param.yaml.
 
-NOTE: the tenant url should not end with a '/'. 
+NOTE: the tenant url should not end with a '/'.  
 NOTE: the api token should have the following permissions: Read configuration and Write configuration
 
 tenant/environment url  
