@@ -205,7 +205,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## 🛠 [App Service (Functions)]({url}/#dashboard/dashboard;id={appef};gtf=l_2_HOURS;gf=all)"
+      "markdown": "## 🛠 [App Service (Excluding Functions)]({url}/#dashboard/dashboard;id={appef};gtf=l_2_HOURS;gf=all)"
     },
     {
       "name": "Markdown",
@@ -221,7 +221,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## 🛠 [App Service (Excluding Functions)]({url}/#dashboard/dashboard;id={appf};gtf=l_2_HOURS;gf=all)"
+      "markdown": "## 🛠 [App Service (Functions)]({url}/#dashboard/dashboard;id={appf};gtf=l_2_HOURS;gf=all)"
     },
     {
       "name": "Markdown",
