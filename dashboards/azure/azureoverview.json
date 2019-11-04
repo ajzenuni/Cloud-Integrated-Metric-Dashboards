@@ -132,7 +132,7 @@
       }
     },
     {
-      "name": "App Service (Functions)",
+      "name": "App Service (Excluding Functions)",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -282,7 +282,7 @@
       }
     },
     {
-      "name": "App Service (Excluding Functions)",
+      "name": "App Service (Functions)",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
