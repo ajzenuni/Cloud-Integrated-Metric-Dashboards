@@ -5,7 +5,7 @@ The cloud integrated metric dashboards will help close any gaps in visibility of
 Install the required modules running 'pip install -r stable-req.text'
 
 # Get Started
-Provide the tenant/environment url, api-token and username params in the auth_param_example.yaml file found in etc/. ****Rename the file to auth_param.yaml.*****
+Provide the tenant/environment url, api-token and username params in the auth_param_example.yaml file found in etc/. **Rename the file to auth_param.yaml.**
 
 tenant/environment url  
 managed: https://{your-domain}/e/{your-environment-id}  
