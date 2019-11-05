@@ -19,6 +19,6 @@ username params
 Should match the username presented within the Dynatrace UI. This user will become the owner of these dashboards. You can also define the way these dashboards are shared, publicly/privately.
 
 # Executing
-python importdash.py --idash {cloud_technology} - aws/azure/k8s/cf/vmware
+python importdash.py --idash {cloud_technology} - aws/azure/k8s/cloudfoundry/vmware
 
 NOTE: May take some time to publish the dashboards to your environment
