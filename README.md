@@ -22,3 +22,11 @@ Should match the username presented within the Dynatrace UI. This user will beco
 python importdash.py --idash {cloud_technology} - aws/azure/k8s/cloudfoundry/vmware
 
 NOTE: May take some time to publish the dashboards to your environment
+
+#Screenshots
+![K8s overview](images/overview.png)
+Each dashboard contains an overview landing page to showcase some key integrated metrics of the cloud platform.
+![K8s Cluster](images/cluster.png)
+Granular dashboard highlighting a component of the cloud platform in this case Kubernetes Cluster
+![K8s Node](images/node.png)
+Granular dashboard highlighting a component of the cloud platform in this case Kubernetes Node
