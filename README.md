@@ -23,7 +23,7 @@ python importdash.py --idash {cloud_technology} - aws/azure/k8s/cloudfoundry/vmw
 
 NOTE: May take some time to publish the dashboards to your environment
 
-#Screenshots
+# Screenshots
 ![K8s overview](images/overview.png)
 Each dashboard contains an overview landing page to showcase some key integrated metrics of the cloud platform.
 ![K8s Cluster](images/cluster.png)
