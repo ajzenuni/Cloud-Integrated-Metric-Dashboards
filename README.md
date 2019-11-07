@@ -1,5 +1,8 @@
 # Cloud_Integrated_Metric_Dashboards-CIMD-
-The cloud integrated metric dashboards will help close any gaps in visibility of the metrics for customers
+The cloud integrated metric dashboards will help close any gaps in visibility of the metrics for customers.
+
+# Description
+CIMDs are prefabricated cloud platform focused dashboards imported via a python script. The dashboards are created with the end-user in mind, easy to use and organized. CIMDs give you a glance at the health of the cloud or platform integration. They allow you to focus on a specific component as well as provide you an overview of the cloud platform.   
 
 # Requirements
 Install the required modules running 'pip install -r stable-req.text'
