@@ -3,12 +3,11 @@ import requests, json, io, click, yaml, sys
 from dash import Dash
 from params import Params
 
-def createdashboard():
-    global dash, config
+def createdashboard(dash, config):
     for service, sdict in dash.getdashobj().items():
         dashobj = getFileJSON('template/template.json')
         dashobj['dashboardMetadata']['name'] = sdict['name']
-        post = requests.post(config.geturl() + '/api/config/v1/dashboards',headers={'Content-Type': 'application/json'},data=json.dumps(dashobj), params=config.getapi())
+        post = requests.post('{url}/api/config/v1/dashboards'.format(url = config.geturl()),headers={'Content-Type': 'application/json'},data=json.dumps(dashobj), params=config.getapi())
         id_content = post.json()
         if(post.status_code >= 400):
             print("The API Token in the auth_params.yaml file is incorrect or has improper permissions. Please ensure the correct token is supplied or it has the 'Read configuration' and 'Write configuration' permissions.")
@@ -17,8 +16,7 @@ def createdashboard():
             id_content = post.json()
             dash.setid(id_content['id'], service)
 
-def putdashboard():
-    global dash, config
+def putdashboard(dash, config):
     final_menu = []
     for service in dash.getdashobj():
         final_menu.append(dash.getmark(service))
@@ -29,10 +27,9 @@ def putdashboard():
         dashobj['tiles'].extend(final_menu)
         dashobj = config.setparams(dashobj)
         
-        requests.put(config.geturl() + '/api/config/v1/dashboards/'+dash.getid(service),headers={'Content-Type': 'application/json'},data=json.dumps(dashobj), params=config.getapi())
+        requests.put('{url}/api/config/v1/dashboards/{service}'.format(url = config.geturl(),service = dash.getid(service)),headers={'Content-Type': 'application/json'},data=json.dumps(dashobj), params=config.getapi())
 
-def editmenu(menu):
-    global dash, config
+def editmenu(menu, dash, config):
     new_menu = []
     for mark_val in menu:
         mark_val['markdown'] = mark_val['markdown'].replace('{'+'url'+'}',config.geturl())
@@ -60,15 +57,14 @@ help='''-----------Available Dashbaords-----------\n
     --------------------------------------\n''')
 
 def main(idash):
-    global dash, config
     with open('etc/dash_param.yaml') as param_file:
             params = yaml.load(param_file, Loader=yaml.FullLoader)
     if idash in params:
         config = Params()
         dash = Dash(params[idash]['param'])
-        createdashboard()
-        editmenu(getFileJSON(params[idash]['menu']))
-        putdashboard()
+        createdashboard(dash, config)
+        editmenu(getFileJSON(params[idash]['menu']), dash, config)
+        putdashboard(dash, config)
     else:
         print('Please provide the correct arguments, for help re-run with --help')
 
