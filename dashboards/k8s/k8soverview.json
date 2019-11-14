@@ -171,7 +171,7 @@
       }
     },
     {
-      "name": "Kuberentes Node Health",
+      "name": "Kubernetes Node Health",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
