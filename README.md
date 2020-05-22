@@ -1,3 +1,5 @@
+***NOT SUPPORTED BY DYNATRACE****
+
 # Cloud_Integrated_Metric_Dashboards-CIMD-
 The cloud integrated metric dashboards will help close any gaps in visibility of the metrics for customers.
 
